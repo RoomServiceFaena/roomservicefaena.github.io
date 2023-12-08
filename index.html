@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faena Room Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/F.png" alt="Logo de Tu Mercado de Comidas" class="logo">
+        <h1><f>F</f>aena Room Service</h1>
+
+        <div class="filtro-container">
+            <label for="filtro">Filtrar por:</label>
+            <select id="filtro" onchange="filtrarPlatos()">
+                <option value="todos">Todos</option>
+                <option value="desayuno">Desayuno/Merienda</option>
+                <option value="almuerzo">Almuerzo/Cena</option>
+                <option value="bebidas">Bebidas</option>
+            </select>
+        </div>
+
+        <div class="carrito-icon" onclick="mostrarCarrito()">
+            <a href="#carrito"><img src="img/carrito.jpg" alt="Icono de Carrito de Compras"></a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome To Faena Room Service</h2>
+    </section>
+
+    <section id="comidas">
+        <div class="comida">
+            <img src="img/comida1.jpg" alt="Plato 1">
+            <h2>Tostado De Jamon y Queso</h2>
+            <p></p>
+            <p>Precio: $10.99</p>
+            <button onclick="agregarAlCarrito('Tostado de Jamon y Queso', 12.99)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comida">
+            <img src="img/ojoBife.jpg" alt="Plato 2">
+            <h2>Ojo de Bife</h2>
+            <p>Descripción del plato.</p>
+            <p>Precio: $12.99</p>
+            <button onclick="agregarAlCarrito('Ojo De Bife', 12.99)">Añadir al Carrito</button>
+        </div>
+
+    <section id="comidas">
+        <div class="comida">
+            <img src="img/ensalada-cesar.jpg" alt="Plato 2">
+            <h2>Ensalada Cesar</h2>
+            <p>Descripción del plato.</p>
+            <p>Precio: $10.99</p>
+            <button onclick="agregarAlCarrito('Ensalada Cesa', 12.99)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comida">
+            <img src="img/empanadas.jpg" alt="Plato 2">
+            <h2>Empanadas Argentinas</h2>
+            <p>Descripción del plato.</p>
+            <p>Precio: $12.99</p>
+            <button onclick="agregarAlCarrito('Empanadas Argentinas', 12.99)">Añadir al Carrito</button>
+        </div>
+
+        
+    <section id="comidas">
+        <div class="comida">
+            <img src="img/pizza.jpg" alt="Plato 2">
+            <h2>Pizza Margarita</h2>
+            <p>Descripción del plato.</p>
+            <p>Precio: $10.99</p>
+            <button onclick="agregarAlCarrito('Pizza Margarita', 12.99)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comida">
+            <img src="img/hamburguesaConPapas.jpg" alt="Plato 2">
+            <h2>Hamburgesa con papas</h2>
+            <p>Descripción del plato.</p>
+            <p>Precio: $12.99</p>
+            <button onclick="agregarAlCarrito('Hamburgesa con papas', 12.99)">Añadir al Carrito</button>
+        </div>
+
+
+
+            <div class="comida">
+                <img src="img/sandwichLomo.jpg" alt="Plato 2">
+                <h2>sandwich de Lomo</h2>
+                <p>Descripción del plato.</p>
+                <p>Precio: $10.99</p>
+                <button onclick="agregarAlCarrito('Plato 7', 12.99)">Añadir al Carrito</button>
+            </div>
+    
+            <div class="comida">
+                <img src="img/jugoNaranja.jpg" alt="Plato 2">
+                <h2>Jugo De Naranja</h2>
+                <p>Descripción del plato.</p>
+                <p>Precio: $12.99</p>
+                <button onclick="agregarAlCarrito('Plato 8', 12.99)">Añadir al Carrito</button>
+                
+            </div>
+
+        <!-- Puedes agregar más elementos "comida" según sea necesario -->
+    </section>
+
+    <div id="carrito-ventana" class="carrito-ventana">
+        <div id="resumen-carrito"></div>
+        <div id="total-carrito"></div>
+        <button onclick="cerrarCarrito()">Cerrar Carrito</button>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+
+
+
+
+</html>
