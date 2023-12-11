@@ -99,10 +99,35 @@ function mostrarCarrito() {
             // Volver a mostrar el carrito actualizado
             mostrarCarrito();
         }
-}
+    }
 }
 
 function cerrarCarrito() {
     const carritoVentana = document.getElementById('carrito-ventana');
     carritoVentana.classList.remove('visible');
+}
+
+
+function ordenarAHabitacion() {
+    const resumenCarrito = document.getElementById('resumen-carrito');
+    const totalCarrito = document.getElementById('total-carrito');
+
+    // Verificar si el carrito está vacío
+    if (carrito.length > 0) {
+        let resumen = 'Resumen de la Orden:\n\n';
+
+        // Construir el resumen de la orden
+        carrito.forEach(item => {
+            resumen += `${item.cantidad}x ${item.nombre} - $${(item.precio * item.cantidad).toFixed(2)}\n`;
+        });
+
+        // Calcular el total del carrito
+        const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+        resumen += `\nTotal: $${total.toFixed(2)}`;
+
+        // Mostrar el alert con el resumen de la orden
+        alert(resumen);
+    } else {
+        alert('El carrito está vacío. Agregue elementos antes de ordenar.');
+    }
 }
